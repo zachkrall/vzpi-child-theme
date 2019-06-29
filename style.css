@@ -1,0 +1,17 @@
+/*
+ Theme Name:   Blocksy Child
+ Theme URI:
+ Description:
+ Author:       Zach Krall
+ Author URI:   http://example.com
+ Template:     blocksy
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:
+ Text Domain:  blocksy-child
+*/
+
+*{
+  background-color:red!important;
+}
