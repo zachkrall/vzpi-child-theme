@@ -4,14 +4,52 @@
  Description:
  Author:       Zach Krall
  Author URI:   http://example.com
- Template:     blocksy
+ Template:     Blocksy
  Version:      1.0.0
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:
  Text Domain:  blocksy-child
 */
+:root{
+  --white: #ffffff;
+  --background: var(--white);
 
-*{
-  background-color:red!important;
+  /* --paletteColor1: tomato; */
+  --paletteColor2: #0a0c0a;
+  --paletteColor3: #0a0c0a;
+  --paletteColor4: #0a0c0a;
+
+  --font-family: "Helvetica Neue",Arial,sans-serif;
+
+  --cardSpacing: 0px;
+}
+
+#main-container-vzpi{
+  background: var(--background);
+}
+
+/* No Default Box Shadows */
+#main-container-vzpi header,
+#main-container-vzpi article.entry-card{
+  box-shadow:none;
+}
+
+#main-container-vzpi header div[class^='header'],
+#main-container-vzpi main,
+#main-container-vzpi footer *{
+  background: var(--background);
+}
+
+#main-container-vzpi article.entry-card{
+}
+.entry-card > *:not(:last-child){
+  margin-bottom:0px!important;
+}
+.entry-card > .entry-meta{
+  opacity:0.7;
+}
+
+body:not(.main-content-area-boundless) section#primary.content-area{
+  padding-top:calc( var(--contentAreaSpacing) * 0.25);
 }
