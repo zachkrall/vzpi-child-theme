@@ -1,15 +1,15 @@
 /*
- Theme Name:   Blocksy Child
- Theme URI:
- Description:
- Author:       Zach Krall
+ Theme Name:   VZPI Blocksy Child
+ Theme URI:    http://example.com/twenty-fifteen-child/
+ Description:  Blocksy Child Theme
+ Author:       John Doe
  Author URI:   http://example.com
- Template:     Blocksy
+ Template:     blocksy
  Version:      1.0.0
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
- Tags:
- Text Domain:  blocksy-child
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  blocksychild
 */
 :root{
   --white: #ffffff;
@@ -52,4 +52,13 @@
 
 body:not(.main-content-area-boundless) section#primary.content-area{
   padding-top:calc( var(--contentAreaSpacing) * 0.25);
+}
+
+svg[class^='social-']{
+  height: 3rem!important;
+  width: 3rem!important;
+}
+
+.ct-meta-author{
+  display:none;
 }

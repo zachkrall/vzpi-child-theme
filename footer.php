@@ -83,7 +83,7 @@ if (get_theme_mod('footer_reveal', 'no') === 'yes') {
 
 			<?php ob_start(); ?>
 
-			<section class="<?php echo esc_attr($primary_area_class); ?>">
+			<!-- <section class="<?php echo esc_attr($primary_area_class); ?>">
 				<div class="<?php echo esc_attr($container_class) ?>">
 					<div
 						class="grid-columns"
@@ -101,7 +101,7 @@ if (get_theme_mod('footer_reveal', 'no') === 'yes') {
 						?>
 					</div>
 				</div>
-			</section>
+			</section> -->
 
 			<?php
 				$main_area_output = ob_get_clean();

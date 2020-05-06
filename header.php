@@ -19,7 +19,7 @@ ob_start();
 
 if ( is_customize_preview() ) {
 	$for_preview = true;
-	include locate_template( 'template-parts/header/header-1.php' );
+	include locate_template( './template-parts/header/header-1.php' );
 	$for_preview = false;
 }
 
@@ -29,7 +29,7 @@ ob_start();
 
 if ( is_customize_preview() ) {
 	$for_preview = true;
-	include locate_template( 'template-parts/header/header-2.php' );
+	include locate_template( './template-parts/header/header-2.php' );
 	$for_preview = false;
 }
 

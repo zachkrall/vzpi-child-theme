@@ -97,7 +97,7 @@ if ( ! function_exists( 'blocksy_post_meta' ) ) {
 					<?php } ?>
 
 					<span class="ct-meta-element" <?php blocksy_schema_org_definitions_e('author_link') ?>>
-						<?php echo wp_kses_post(get_the_author_posts_link()); ?>
+						<?php //echo wp_kses_post(get_the_author_posts_link()); ?>
 					</span>
 				</li>
 			<?php } ?>
@@ -168,39 +168,39 @@ if ( ! function_exists( 'blocksy_post_meta' ) ) {
 			<?php } ?>
 
 			<?php
-			if ( $post_meta_descriptor['categories'] && blocksy_get_categories_list() ) {
-				if (!$args['plain']) {
-					echo '<li class="ct-meta-categories" data-type="' . esc_attr($args['category_style']) . '">';
-
-					if ($args['meta_type'] === 'icons' || $args['force_icons']) {
-						echo '<span class="ct-meta-icon">';
-						echo '<svg width="13" height="13" viewBox="0 0 15 15"><path d="M13,14.3H2c-1.1,0-2-0.9-2-2V2.7c0-1.1,0.9-2,2-2h3.4C5.7,0.7,5.9,0.8,6,1l1.2,1.7H13c1.1,0,2,0.9,2,2v7.5C15,13.4,14.1,14.3,13,14.3z M2,2C1.7,2,1.4,2.4,1.4,2.7v9.5C1.4,12.6,1.7,13,2,13H13c0.4,0,0.7-0.3,0.7-0.7V4.8c0-0.4-0.3-0.7-0.7-0.7H6.8C6.6,4.1,6.4,4,6.3,3.8L5.1,2H2z"/></svg>';
-						echo '</span>';
-					}
-
-					if ($args['labels']) {
-						echo '<span class="ct-meta-label">';
-						echo esc_html(__( 'In ', 'blocksy' ));
-						echo '</span>';
-					}
-
-					echo '<span class="ct-meta-element">';
-					echo wp_kses_post(blocksy_get_categories_list( ' </span><span class="ct-meta-element">' ));
-					echo '</span>';
-					echo '</li>';
-				} else {
-					echo '<li>';
-					echo wp_kses_post(blocksy_get_categories_list( '</li><li>' ));
-					echo '</li>';
-				}
-
-			}
-
-			if ( $post_meta_descriptor['tags'] && blocksy_get_categories_list( '', false ) ) {
-				echo '<li>';
-				echo wp_kses_post(blocksy_get_categories_list( '</li><li>', false ));
-				echo '</li>';
-			}
+			// if ( $post_meta_descriptor['categories'] && blocksy_get_categories_list() ) {
+			// 	if (!$args['plain']) {
+			// 		echo '<li class="ct-meta-categories" data-type="' . esc_attr($args['category_style']) . '">';
+			//
+			// 		if ($args['meta_type'] === 'icons' || $args['force_icons']) {
+			// 			echo '<span class="ct-meta-icon">';
+			// 			echo '<svg width="13" height="13" viewBox="0 0 15 15"><path d="M13,14.3H2c-1.1,0-2-0.9-2-2V2.7c0-1.1,0.9-2,2-2h3.4C5.7,0.7,5.9,0.8,6,1l1.2,1.7H13c1.1,0,2,0.9,2,2v7.5C15,13.4,14.1,14.3,13,14.3z M2,2C1.7,2,1.4,2.4,1.4,2.7v9.5C1.4,12.6,1.7,13,2,13H13c0.4,0,0.7-0.3,0.7-0.7V4.8c0-0.4-0.3-0.7-0.7-0.7H6.8C6.6,4.1,6.4,4,6.3,3.8L5.1,2H2z"/></svg>';
+			// 			echo '</span>';
+			// 		}
+			//
+			// 		if ($args['labels']) {
+			// 			echo '<span class="ct-meta-label">';
+			// 			echo esc_html(__( 'In ', 'blocksy' ));
+			// 			echo '</span>';
+			// 		}
+			//
+			// 		echo '<span class="ct-meta-element">';
+			// 		echo wp_kses_post(blocksy_get_categories_list( ' </span><span class="ct-meta-element">' ));
+			// 		echo '</span>';
+			// 		echo '</li>';
+			// 	} else {
+			// 		echo '<li>';
+			// 		echo wp_kses_post(blocksy_get_categories_list( '</li><li>' ));
+			// 		echo '</li>';
+			// 	}
+			//
+			// }
+			//
+			// if ( $post_meta_descriptor['tags'] && blocksy_get_categories_list( '', false ) ) {
+			// 	echo '<li>';
+			// 	echo wp_kses_post(blocksy_get_categories_list( '</li><li>', false ));
+			// 	echo '</li>';
+			// }
 
 			?>
 		<?php
